@@ -3,6 +3,7 @@
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
     xmlns="sap.m"
+    xmlns:s="sap.f.semantic"
     xmlns:f="sap.ui.layout.form"
     xmlns:core="sap.ui.core"
 >
@@ -11,122 +12,105 @@
         title="{i18n>title}"
     >
         <content>
-            <f:SimpleForm
-                id="main_simpleform"
-                editable="true"
-                layout="ResponsiveGridLayout"
-                title="{i18n>title}"
-                labelSpanXL="3"
-                labelSpanL="3"
-                labelSpanM="3"
-                labelSpanS="12"
-                adjustLabelSpan="false"
-                emptySpanXL="4"
-                emptySpanL="4"
-                emptySpanM="4"
-                emptySpanS="0"
-                columnsXL="1"
-                columnsL="1"
-                columnsM="1"
-                singleContainerFullSize="false"
-            >
-                <f:content>
-                    <Label
-                        id="app_label_customerid"
-                        text="{i18n>app.customerid}"
-                        labelFor="app_text_customerid"
+            <s:SemanticPage id="main_page">
+                <s:titleHeading>
+                    <Title
+                        id="main_title"
+                        text="{i18n>main.title}"
                     />
-                    <Text
-                        id="app_text_customerid"
-                        text="1000001"
-                    />
+                </s:titleHeading>
 
-                    <Label
-                        id="app_label_firstname"
-                        text="{i18n>app.firstname}"
-                        labelFor="app_input_firstname"
-                    />
-                    <Input
-                        id="app_input_firstname"
-                        value="Dexter"
-                    />
-
-                    <Label
-                        id="app_label_lastname"
-                        text="{i18n>app.lastname}"
-                        labelFor="app_input_lastname"
-                    />
-                    <Input
-                        id="app_input_lastname"
-                        value="Morgan"
-                    />
-
-                    <Label
-                        id="app_label_title"
-                        text="{i18n>app.title}"
-                        labelFor="app_input_title"
-                    />
-                    <Input
-                        id="app_input_title"
-                        value="Dr."
-                    />
-
-                    <Label
-                        id="app_label_gender"
-                        text="{i18n>app.gender}"
-                        labelFor="app_select_gender"
-                    />
-                    <Select id="app_select_gender" selectedKey="male" >
-                        <items >
-                            <core:Item
-                                id="app_item_female"
-                                key="female"
-                                text="{i18n>female}"
-                            />
-                            <core:Item
-                                id="app_item_male"
-                                key="male"
-                                text="{i18n>male}"
-                            />
-                            <core:Item
-                                id="app_item_diverse"
-                                key="diverse"
-                                text="{i18n>diverse}"
-                            />
+                <s:content>
+                    <Table
+                        id="main_table"
+                        headerText="{i18n>main.table.title}"
+                    >
+                        <columns>
+                            <Column id="idMainColumn">
+                                <Text
+                                    id="main_text_customerid"
+                                    text="{i18n>app.customerid}"
+                                />
+                            </Column>
+                            <Column id="main_column_firstname">
+                                <Text
+                                    id="main_text_firstname"
+                                    text="{i18n>app.firstname}"
+                                />
+                            </Column>
+                            <Column id="main_column_lastname">
+                                <Text
+                                    id="main_text_lastname"
+                                    text="{i18n>app.lastname}"
+                                />
+                            </Column>
+                            <Column
+                                id="main_column_title"
+                                minScreenWidth="Desktop"
+                            >
+                                <Text
+                                    id="main_text_title"
+                                    text="{i18n>app.title}"
+                                />
+                            </Column>
+                            <Column
+                                id="main_column_gender"
+                                minScreenWidth="Desktop"
+                            >
+                                <Text
+                                    id="main_text_gender"
+                                    text="{i18n>app.gender}"
+                                />
+                            </Column>
+                            <Column
+                                id="main_column_email"
+                                minScreenWidth="Desktop"
+                            >
+                                <Text
+                                    id="main_text_email"
+                                    text="{i18n>app.email}"
+                                />
+                            </Column>
+                            <Column
+                                id="main_column_phone"
+                                minScreenWidth="Desktop"
+                            >
+                                <Text
+                                    id="main_text_phone"
+                                    text="{i18n>app.phone}"
+                                />
+                            </Column>
+                            <Column
+                                id="main_column_website"
+                                minScreenWidth="Desktop"
+                            >
+                                <Text
+                                    id="main_text_website"
+                                    text="{i18n>app.website}"
+                                />
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <ObjectIdentifier title="1000001" />
+                                    <Text text="Max" />
+                                    <Text text="Mustermann" />
+                                    <Text text="Dr." />
+                                    <Text text="male" />
+                                    <Text text="max.mustermann@clouddna.at" />
+                                    <Text text="+43676123123" />
+                                    <Link
+                                        text="www.clouddna.at"
+                                        href="https://{www.clouddna.at}"
+                                        target="_blank"
+                                    />
+                                </cells>
+                            </ColumnListItem>
                         </items>
-                    </Select>
-
-                    <Label
-                        id="app_label_email"
-                        text="{i18n>app.email}"
-                        labelFor="app_input_email"
-                    />
-                    <Input
-                        id="app_input_email"
-                        value="findme@golfstrom.com"
-                    />
-
-                    <Label
-                        id="app_label_phone"
-                        text="{i18n>app.phone}"
-                        labelFor="app_input_phone"
-                    />
-                    <Input
-                        id="app_input_phone"
-                        value="+43676123123"
-                    />
-
-                    <Label
-                        id="app_label_website"
-                        text="{i18n>app.website}"
-                        labelFor="app_input_website"
-                    />
-                    <Input
-                        id="app_input_website"
-                        value="https://clouddna.at"
-                    />
-                </f:content>
-            </f:SimpleForm>
+                    </Table>
+                </s:content>
+            </s:SemanticPage>
         </content>
     </Page>
 </mvc:View>
