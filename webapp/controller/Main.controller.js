@@ -10,6 +10,12 @@ sap.ui.define([
         return Controller.extend("at.clouddna.training01.zalexapp1.controller.Main", {
             onInit: function () {
 
+            },
+
+            dateFormatter: function (sDate) {
+                let dateObj = new Date(sDate);
+                return dateObj.getDate() + "." + (dateObj.getMonth() + 1) + "." + dateObj.getFullYear();
             }
-        });
+        }
+);
     });
