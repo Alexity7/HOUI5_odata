@@ -22,10 +22,17 @@
 
                 <s:content>
                     <Table
+                        items="{/customers}"
                         id="main_table"
                         headerText="{i18n>main.table.title}"
                     >
                         <columns>
+                            <Column id="icon">
+                                <Text
+                                    id="main_text_icon"
+                                    text="{i18n>app.icon}"
+                                />
+                            </Column>
                             <Column id="idMainColumn">
                                 <Text
                                     id="main_text_customerid"
@@ -63,6 +70,15 @@
                                 />
                             </Column>
                             <Column
+                                id="main_column_birthdate"
+                                minScreenWidth="Desktop"
+                            >
+                                <Text
+                                    id="main_text_birthdate"
+                                    text="{i18n>app.birthdate}"
+                                />
+                            </Column>
+                            <Column
                                 id="main_column_email"
                                 minScreenWidth="Desktop"
                             >
@@ -93,16 +109,22 @@
                         <items>
                             <ColumnListItem>
                                 <cells>
-                                    <ObjectIdentifier title="1000001" />
-                                    <Text text="Max" />
-                                    <Text text="Mustermann" />
-                                    <Text text="Dr." />
-                                    <Text text="male" />
-                                    <Text text="max.mustermann@clouddna.at" />
-                                    <Text text="+43676123123" />
+                                    <core:Icon
+                                        id="main_icon_critical"
+                                        src="sap-icon://message-warning"
+                                        visible="{= ${Firstname} === 'Max'}"
+                                    />
+                                    <ObjectIdentifier title="{Customerid}" />
+                                    <Text text="{Firstname}" />
+                                    <Text text="{Lastname}" />
+                                    <Text text="{Title}" />
+                                    <Text text="{Gender}" />
+                                    <Text text="{Birthdate}" />
+                                    <Text text="{Email}" />
+                                    <Text text="{Phone}" />
                                     <Link
-                                        text="www.clouddna.at"
-                                        href="https://{www.clouddna.at}"
+                                        text="{Website}"
+                                        href="https://{Website}"
                                         target="_blank"
                                     />
                                 </cells>
