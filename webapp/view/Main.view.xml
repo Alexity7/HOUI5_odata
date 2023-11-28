@@ -118,8 +118,21 @@
                                     <Text text="{Firstname}" />
                                     <Text text="{Lastname}" />
                                     <Text text="{Title}" />
-                                    <Text text="{= ${Gender} === 'male' ? ${i18n>male} : ${i18n>female} }" />
-                                    <Text text="{path: 'Birthdate', formatter: '.dateFormatter'}"/>
+                                    <HBox alignItems="Start">
+                                        <items>
+                                            <core:Icon
+                                                id="main_icon_gender"
+                                                src="{= ${Gender} === 'male' ? 'sap-icon://BusinessSuiteInAppSymbols/icon-female' : 'sap-icon://BusinessSuiteInAppSymbols/icon-male'}"
+                                                class="sapUiTinyMarginEnd"
+                                            />
+                                            <Text
+                                                text="{= ${Gender} === 'male' ? ${i18n>male} : ${i18n>female} }"
+                                            />
+                                        </items>
+                                    </HBox>
+                                    <Text
+                                        text="{path: 'Birthdate', formatter: '.dateFormatter'}"
+                                    />
                                     <Text text="{Email}" />
                                     <Text text="{Phone}" />
                                     <Link
