@@ -107,7 +107,7 @@
                             </Column>
                         </columns>
                         <items>
-                            <ColumnListItem>
+                            <ColumnListItem type="Navigation" press="onListItemClicked">
                                 <cells>
                                     <core:Icon
                                         id="main_icon_critical"
