@@ -18,7 +18,7 @@
                             <Label text="{i18n>app.title}" labelFor="title" />
                             <Text id="title" text="{Title}" />
                             <Label text="{i18n>app.gender}" labelFor="gender" />
-                            <Text id="gender" text="{path: 'Gender', formatter: '.genderFormatter'}" />
+                            <Text id="gender" text="{path: 'Gender', formatter: '.formatter.gender'}" />
                             <Label text="{i18n>app.email}" labelFor="email" />
                             <Text id="email" text="{Email}" />
                             <Label text="{i18n>app.phone}" labelFor="phone" />

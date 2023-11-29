@@ -2,17 +2,20 @@ sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/m/MessageBox",
     "sap/ui/model/json/JSONModel",
-    "sap/ui/core/Fragment"
+    "sap/ui/core/Fragment",
+    "at/clouddna/training01/zalexapp1/data/formatter/Formatter"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, MessageBox, JSONModel, Fragment) {
+    function (Controller, MessageBox, JSONModel, Fragment, Formatter) {
     /* ... */
         "use strict";
 
         return Controller.extend("at.clouddna.training01.zalexapp1.controller.Customer", {
             _fragmentList: {},
+
+            formatter: Formatter,
             onInit: function () {
                 const oRouter = this.getOwnerComponent().getRouter();
                 const oEditModel = new JSONModel({
@@ -53,13 +56,7 @@ sap.ui.define([
                 sPath = decodeURIComponent(sPath);
                 this.getView().bindElement( sPath );
             },
-            genderFormatter: function(sKey){
-                let oView = this.getView();
-                let oI18nModel = oView.getModel("i18n");
-                let oResourceBundle = oI18nModel.getResourceBundle();
-                let sText = oResourceBundle.getText(sKey);
-                return sText;
-            },
+            
             setContentDensity : function() {
                 if (!this._sContentDensityClass) {
                     if (!sap.ui.Device.support.touch) {
