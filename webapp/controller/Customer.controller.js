@@ -19,7 +19,7 @@ sap.ui.define([
                     editmode: false
                 });
             
-                /*this.setContentDensity();*/
+                this.setContentDensity();
             
                 this.getView().setModel(oEditModel, "editModel");
             
@@ -59,6 +59,16 @@ sap.ui.define([
                 let oResourceBundle = oI18nModel.getResourceBundle();
                 let sText = oResourceBundle.getText(sKey);
                 return sText;
+            },
+            setContentDensity : function() {
+                if (!this._sContentDensityClass) {
+                    if (!sap.ui.Device.support.touch) {
+                        this._sContentDensityClass = "sapUiSizeCompact";
+                    } else {
+                        this._sContentDensityClass = "sapUiSizeCozy";
+                    }
+                }
+                return this._sContentDensityClass;
             },
             onEditPressed: function(){
                 this._toggleEdit(true);
