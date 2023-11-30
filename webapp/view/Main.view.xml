@@ -22,10 +22,16 @@
 
                 <s:content>
                     <Table
-                        items="{/customers}"
+                        items="{/Z_P_CUSTOMER}"
                         id="main_table"
                         headerText="{i18n>main.table.title}"
                     >
+                    <headerToolbar>
+                    <Toolbar >
+                    <ToolbarSpacer />
+                    <Button press="onCreatePressed" text="Anlegen"/>
+                    </Toolbar>
+                    </headerToolbar>
                         <columns>
                             <Column id="icon">
                                 <Text
@@ -122,11 +128,11 @@
                                         <items>
                                             <core:Icon
                                                 id="main_icon_gender"
-                                                src="{= ${Gender} === 'male' ? 'sap-icon://BusinessSuiteInAppSymbols/icon-female' : 'sap-icon://BusinessSuiteInAppSymbols/icon-male'}"
+                                                src="{= ${Gender} === '1' ? 'sap-icon://BusinessSuiteInAppSymbols/icon-female' : 'sap-icon://BusinessSuiteInAppSymbols/icon-male'}"
                                                 class="sapUiTinyMarginEnd"
                                             />
                                             <Text
-                                                text="{= ${Gender} === 'male' ? ${i18n>male} : ${i18n>female} }"
+                                                text="{path: 'Gender', formatter: '.formatter.gender'}"
                                             />
                                         </items>
                                     </HBox>
