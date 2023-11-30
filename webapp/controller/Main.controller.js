@@ -1,15 +1,15 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
+    "at/clouddna/training01/zalexapp1/controller/BaseController",
     "at/clouddna/training01/zalexapp1/data/formatter/Formatter",
     "sap/m/MessageBox"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, Formatter, MessageBox) {
+    function (BaseController, Formatter, MessageBox) {
         "use strict";
 
-        return Controller.extend("at.clouddna.training01.zalexapp1.controller.Main", {
+        return BaseController.extend("at.clouddna.training01.zalexapp1.controller.Main", {
 
             formatter: Formatter,
 

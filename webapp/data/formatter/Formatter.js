@@ -6,7 +6,6 @@ sap.ui.define([], function () {
                 oI18nModel = oView.getModel("i18n"),
                 oResourceBundle = oI18nModel.getResourceBundle(),
                 sText;
-
             if (sKey === "1") {
                 sText = oResourceBundle.getText("female");
             } else {

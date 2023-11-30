@@ -18,17 +18,18 @@
                             <Label text="{Title/#@sap:label}" labelFor="title" />
                             <Text id="title" text="{Title}" />
                             <Label text="{Gender/#@sap:label}" labelFor="gender" />
-                            <Text id="gender" text="{path: 'genderModel>text', formatter: '.formatter.gender'}" />
+                            <Text id="gender" text="{path: 'Gender', formatter: '.formatter.gender'}" />
                             <Label text="{Email/#@sap:label}" labelFor="email" />
-                            <Text id="email" text="{Email}" />
-                            <Label text="{Phone/#@sap:label}" labelFor="phone" />
-                            <Text id="phone" text="{Phone}" />
+                            <Link id="email" text="{Email}" press="onEmailPressed"/>
+                            <Label text="{Phone/#@sap:label}" labelFor="phone"/>
+                            <Link id="phone" text="{Phone}" press="onPhonePressed" />
                             <Label text="{Website/#@sap:label}" labelFor="website" />
-                            <Text id="website" text="{Website}" />
+                            <Link id="website" text="{Website}" href="https://{Website}"/>
                             <Label text="{Birthdate/#@sap:label}" labelFor="birthdate" />
                             <Text id="birthdate" text="{path: 'Birthdate', type: 'sap.ui.model.odata.type.DateTime' }" />
                         </f:SimpleForm>
                     </u:blocks>
                 </u:ObjectPageSubSection>
     </u:ObjectPageSection>
+    
 </core:FragmentDefinition>
