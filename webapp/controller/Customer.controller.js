@@ -25,8 +25,6 @@ sap.ui.define([
                 this.setContentDensity();
             
                 this.getView().setModel(oEditModel, "editModel");
-            
-                this._showCustomerFragment("CustomerDisplay");
 
                 oRouter.getRoute("RouteCustomer").attachPatternMatched(this._onPatternMatched, this);
                 oRouter.getRoute("CreateCustomer").attachPatternMatched(this._onCreatePatternMatched, this);
@@ -55,6 +53,8 @@ sap.ui.define([
                 let sPath = oEvent.getParameters().arguments["path"];
                 sPath = decodeURIComponent(sPath);
                 this.getView().bindElement( sPath );
+
+                this._showCustomerFragment("CustomerDisplay");
             },
 
             _onCreatePatternMatched: function (oEvent) {
