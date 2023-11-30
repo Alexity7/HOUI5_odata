@@ -18,7 +18,7 @@
                             <Label text="{i18n>app.title}" labelFor="title" />
                             <Text id="title" text="{Title}" />
                             <Label text="{i18n>app.gender}" labelFor="gender" />
-                            <Text id="gender" text="{path: 'Gender', formatter: '.formatter.gender'}" />
+                            <Text id="gender" text="{path: 'genderModel>text', formatter: '.formatter.gender'}" />
                             <Label text="{i18n>app.email}" labelFor="email" />
                             <Text id="email" text="{Email}" />
                             <Label text="{i18n>app.phone}" labelFor="phone" />
@@ -26,7 +26,7 @@
                             <Label text="{i18n>app.website}" labelFor="website" />
                             <Text id="website" text="{Website}" />
                             <Label text="{i18n>app.birthdate}" labelFor="birthdate" />
-                            <Text id="birthdate" text="{Birthdate}" />
+                            <Text id="birthdate" text="{path: 'Birthdate', type: 'sap.ui.model.odata.type.DateTime' }" />
                         </f:SimpleForm>
                     </u:blocks>
                 </u:ObjectPageSubSection>

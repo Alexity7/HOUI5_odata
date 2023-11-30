@@ -29,7 +29,7 @@ sap.ui.define([
                 this._showCustomerFragment("CustomerDisplay");
 
                 oRouter.getRoute("RouteCustomer").attachPatternMatched(this._onPatternMatched, this);
-                /*oRouter.getRoute("CreateCustomer").attachPatternMatched(this._onCreatePatternMatched, this);*/
+                oRouter.getRoute("CreateCustomer").attachPatternMatched(this._onCreatePatternMatched, this);
             },
 
             _showCustomerFragment: function(sFragmentName) {
@@ -55,6 +55,16 @@ sap.ui.define([
                 let sPath = oEvent.getParameters().arguments["path"];
                 sPath = decodeURIComponent(sPath);
                 this.getView().bindElement( sPath );
+            },
+
+            _onCreatePatternMatched: function (oEvent) {
+                this.bCreate = true;
+            
+                let oNewCustomerContext = this.getView().getModel().createEntry("/Z_P_CUSTOMER");
+                this.getView().bindElement(oNewCustomerContext.getPath());
+            
+                this.getView().getModel("editModel").setProperty("/editmode", true);
+                this._showCustomerFragment("CustomerEdit");
             },
             
             setContentDensity : function() {

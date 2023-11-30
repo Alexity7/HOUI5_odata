@@ -29,7 +29,7 @@
                     <headerToolbar>
                     <Toolbar >
                     <ToolbarSpacer />
-                    <Button press="onCreatePressed" text="Anlegen"/>
+                    <Button id="main_button_create" icon="sap-icon://add" type="Transparent" text="{i18n>main.create.button}" press="onCreatePressed"/>
                     </Toolbar>
                     </headerToolbar>
                         <columns>

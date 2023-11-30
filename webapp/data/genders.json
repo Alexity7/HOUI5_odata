@@ -1,11 +1,11 @@
 {
     "genders": [
         {
-            "key": "female",
+            "key": "2",
             "text": "female"
         },
         {
-            "key": "male",
+            "key": "1",
             "text": "male"
         }
     ]

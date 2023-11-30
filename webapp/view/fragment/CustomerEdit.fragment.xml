@@ -39,7 +39,7 @@
                         <Input id="website" value="{Website}" />
 
                         <Label text="{i18n>app.birthdate}" labelFor="birthdate" />
-                        <DatePicker id="birthdate" value="{Birthdate}" />
+                        <DatePicker id="birthdate" value="{path: 'Birthdate', type: 'sap.ui.model.odata.type.DateTime' }" />
                     </f:SimpleForm>
                 </u:blocks>
             </u:ObjectPageSubSection>             

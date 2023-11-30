@@ -28,9 +28,8 @@ sap.ui.define([
                     path: encodeURIComponent(sPath)
                 }, false);
             },
-            onCreatePressed: function(oEvent){
-
-                let oModel = getView().getModel();
+            onCreatePressed: function() {
+                this.getOwnerComponent().getRouter().navTo("CreateCustomer", null, false);
             }
         }
 );
