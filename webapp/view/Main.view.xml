@@ -25,6 +25,8 @@
                         items="{/Z_P_CUSTOMER}"
                         id="main_table"
                         headerText="{i18n>main.table.title}"
+                        mode="Delete"
+                        delete="onDeletePressed"
                     >
                     <headerToolbar>
                     <Toolbar >
