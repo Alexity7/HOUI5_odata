@@ -9,23 +9,23 @@
     <u:ObjectPageSubSection>
                     <u:blocks>
                         <f:SimpleForm id="customer_sf" title="{Firstname} {Lastname}">
-                            <Label  id="customeridlabel" text="{i18n>app.customerid}" labelFor="customerid" />
+                            <Label  id="customeridlabel" text="{Customerid/#@sap:label}" labelFor="customerid" />
                             <Text id="customerid" text="{Customerid}" />
-                            <Label text="{i18n>app.firstname}" labelFor="firstname" />
+                            <Label text="{Firstname/#@sap:label}" labelFor="firstname" />
                             <Text id="firstname" text="{Firstname}" />
-                            <Label text="{i18n>app.lastname}" labelFor="lastname" />
+                            <Label text="{Lastname/#@sap:label}" labelFor="lastname" />
                             <Text id="lastname" text="{Lastname}" />
-                            <Label text="{i18n>app.title}" labelFor="title" />
+                            <Label text="{Title/#@sap:label}" labelFor="title" />
                             <Text id="title" text="{Title}" />
-                            <Label text="{i18n>app.gender}" labelFor="gender" />
+                            <Label text="{Gender/#@sap:label}" labelFor="gender" />
                             <Text id="gender" text="{path: 'genderModel>text', formatter: '.formatter.gender'}" />
-                            <Label text="{i18n>app.email}" labelFor="email" />
+                            <Label text="{Email/#@sap:label}" labelFor="email" />
                             <Text id="email" text="{Email}" />
-                            <Label text="{i18n>app.phone}" labelFor="phone" />
+                            <Label text="{Phone/#@sap:label}" labelFor="phone" />
                             <Text id="phone" text="{Phone}" />
-                            <Label text="{i18n>app.website}" labelFor="website" />
+                            <Label text="{Website/#@sap:label}" labelFor="website" />
                             <Text id="website" text="{Website}" />
-                            <Label text="{i18n>app.birthdate}" labelFor="birthdate" />
+                            <Label text="{Birthdate/#@sap:label}" labelFor="birthdate" />
                             <Text id="birthdate" text="{path: 'Birthdate', type: 'sap.ui.model.odata.type.DateTime' }" />
                         </f:SimpleForm>
                     </u:blocks>

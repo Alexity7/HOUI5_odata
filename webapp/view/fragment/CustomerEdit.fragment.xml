@@ -16,7 +16,7 @@
                         editable="true"
                     >
                         <Label
-                            text="{i18n>app.customerid}"
+                            text="{Customerid/#@sap:label}"
                             labelFor="customerid"
                         />
                         <Input
@@ -25,7 +25,7 @@
                         />
 
                         <Label
-                            text="{i18n>app.firstname}"
+                            text="{Firstname/#@sap:label}"
                             labelFor="firstname"
                         />
                         <Input
@@ -34,7 +34,7 @@
                         />
 
                         <Label
-                            text="{i18n>app.lastname}"
+                            text="{Lastname/#@sap:label}"
                             labelFor="lastname"
                         />
                         <Input
@@ -43,7 +43,7 @@
                         />
 
                         <Label
-                            text="{i18n>app.title}"
+                            text="{Title/#@sap:label}"
                             labelFor="title"
                         />
                         <Input
@@ -52,7 +52,7 @@
                         />
 
                         <Label
-                            text="{i18n>app.gender}"
+                            text="{Gender/#@sap:label}"
                             labelFor="gender"
                         />
                         <Select
@@ -69,7 +69,7 @@
                         </Select>
 
                         <Label
-                            text="{i18n>app.email}"
+                            text="{Email/#@sap:label}"
                             labelFor="email"
                         />
                         <Input
@@ -79,7 +79,7 @@
                         />
 
                         <Label
-                            text="{i18n>app.phone}"
+                            text="{Phone/#@sap:label}"
                             labelFor="phone"
                         />
                         <Input
@@ -89,7 +89,7 @@
                         />
 
                         <Label
-                            text="{i18n>app.website}"
+                            text="{Website/#@sap:label}"
                             labelFor="website"
                         />
                         <Input
@@ -98,7 +98,7 @@
                         />
 
                         <Label
-                            text="{i18n>app.birthdate}"
+                            text="{Birthdate/#@sap:label}"
                             labelFor="birthdate"
                         />
                         <DatePicker
